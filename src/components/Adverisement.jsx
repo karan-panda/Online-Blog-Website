@@ -7,7 +7,7 @@ const Advertisement = ({ adClient, adSlot }) => {
     // }, []);
 
     return (
-        <div className="">
+        <div className="lg:w-2/5">
                 {/* <ins
                     className="adsbygoogle"
                     style={{ display: 'block' }}
@@ -17,7 +17,7 @@ const Advertisement = ({ adClient, adSlot }) => {
                     data-full-width-responsive="true"
                 /> */}
        
-            <img src="https://www.gourmetads.com/wp-content/uploads/2019/05/fast-food-ads-burger-king-300x600.jpg.webp" alt="Ad" />
+            <img src="https://newspaperads.ads2publish.com/wp-content/uploads/2017/09/oven-story-pizza-with-incredible-cheese-bases-introducing-fiery-peri-peri-indtroductory-offer-buy-1-get-1-free-ad-times-of-india-bangalore-17-9-2017.jpg" alt="Ad" />
         </div>
 
     );
