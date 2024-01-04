@@ -1,11 +1,15 @@
 import React from 'react'
 import { FaHeart, FaRegClock } from 'react-icons/fa'
 
-const Recommendation = ({ blog }) => {
-    const formattedDate = new Date(blog.createdAt).toLocaleDateString();
+const Recommendation = ({ blog, onBlogClick }) => {
+    const formattedDate = new Date(blog.createdAt).toLocaleDateString('en-GB');
 
     return (
-        <div className="flex items-start bg-gray-100 rounded-lg p-8 m-8" style={{ backgroundColor: '#EFEAE3' }}>
+        <div 
+            className="flex items-start bg-gray-100 rounded-lg p-8 m-8" 
+            style={{ backgroundColor: '#EFEAE3' }} 
+            onClick={() => onBlogClick(blog.key)}
+        >
             <div className="overflow-hidden mr-4 w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32">
                 <img src={blog.thumbnailImageURL} alt="blog thumbnail" className="object-cover w-full h-full" />
             </div>
@@ -29,4 +33,4 @@ const Recommendation = ({ blog }) => {
     )
 }
 
-export default Recommendation
+export default Recommendation;
